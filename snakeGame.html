@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="snakeGame.css">
+    <script src="snakeGame.js" defer></script>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="scores">
+            <h1 id="score">000</h1>
+            <div class="highScore">highScore:<span id="highScores">000</span></div>
+        </div>
+        <div class="game-board-1">
+            <div class="game-board-2">
+                <div class="game-board-3">
+                    <div id="game-board-play"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button data-key="ArrowUp"><box-icon name='chevron-up'></box-icon></button>
+            <button data-key="ArrowRight"><box-icon name='chevron-right'></box-icon></button>
+            <button data-key="ArrowDown"><box-icon name='chevron-down'></box-icon></button>
+            <button data-key="ArrowLeft"><box-icon name='chevron-left'></box-icon></button>
+            <button id="start" data-code="Space">Start Game</button>
+        </div>
+
+        <div class="start">
+            <div><img id="logo" src="gambar/snake logo.png" alt=""></div>
+            <h1 id="instruction-text">Klick spaceBar or button start game to start the game</h1>
+        </div>
+        
+    </div>
+    
+    
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

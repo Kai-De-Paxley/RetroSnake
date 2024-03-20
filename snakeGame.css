@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #222;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.scores #score {
+    color: rgb(140, 196, 56);
+}
+
+.scores #highScores{
+    color: white;
+    display: none; 
+}
+
+.scores .highScore{
+    display: flex;
+    text-transform: capitalize;
+    color: rgb(108, 139, 62);
+    font-size: 15px;
+}
+
+#game-board-play {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    margin: 5px; 
+    background-color: rgb(70, 90, 40);
+}
+
+.game-board-1{
+    border: 7px solid rgb(2, 29, 21);
+    border-bottom: none;
+    border-radius: 30px;
+    box-shadow: 0 0 0 10px  rgb(2, 29, 21) inset;
+}
+
+.game-board-2 {
+    border: 12px solid rgb(70, 90, 40);
+    border-bottom: none;
+    border-radius: 26px;
+    box-shadow: 0 0 0 10px inset rgb(70, 90, 40);
+}
+.game-board-3 {
+    border: 15px solid rgb(108, 139, 62);
+    border-bottom:none ;
+    border-radius: 20px;
+    box-shadow:inset 0 0 0 10px  rgb(108, 139, 62);
+}
+
+.start{
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    top: 30%;
+    width: 400px;
+}
+
+#instruction-text{
+    text-transform: capitalize;
+    padding: 30px;
+    font-size: 22px;
+}
+
+
+/* style clss make in js */
+.snake{
+    border: 1px #222 dotted;
+    background-color: #222;
+}
+
+.food{
+    border:5px solid blanchedalmond;
+    background-color: #222;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.controls button {
+    padding: 2px 15px;
+    margin-top: 5px;
+    width: 100%;
+    display: none;
+    margin: 0 2px;
+    border: none;
+}
+
+.controls button:last-child {
+    background-color:rgb(108, 139, 62)
+}
+
+
+
+@media only screen and (max-width:772px) {
+    #game-board-play {
+        display: grid;
+        grid-template-columns: repeat(20, 12px);
+        grid-template-rows: repeat(20, 12px);
+        margin: 5px; 
+        background-color: rgb(70, 90, 40);
+    }
+
+    .start{
+        position: absolute;
+        right: 20%;
+        text-align: center;
+        top: 20%;
+        width: 200px; 
+    }
+    
+    #instruction-text{
+        text-transform: capitalize;
+        padding: 0px;
+        font-size: 15px;
+    }
+
+    .controls button {
+        padding: 2px 15px;
+        margin-top: 5px;
+        width: 100%;
+        display: block;
+    }
+
+}
